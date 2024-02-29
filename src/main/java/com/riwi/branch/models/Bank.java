@@ -1,45 +1,30 @@
 package com.riwi.branch.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import java.util.Date;
+import java.util.List;
 
 @Entity
 public class Bank {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer code;
-    private String name;
+    @EmbeddedId
+    private BankId id;
+    @OneToMany
+    private List<Branch> branches;
     private Date dateFundation;
 
     public Bank() {
     }
 
-    public Bank(Integer code, String name, Date dateFundation) {
-        this.code = code;
-        this.name = name;
+    public Bank(BankId id, List<Branch> branches, Date dateFundation) {
+        this.id = id;
+        this.branches = branches;
         this.dateFundation = dateFundation;
     }
 
-    public Integer getCode() {
-        return code;
+    public Bank(Date dateFundation) {
+        this.dateFundation = dateFundation;
     }
-
-    public void setCode(Integer code) {
-        this.code = code;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public Date getDateFundation() {
         return dateFundation;
     }

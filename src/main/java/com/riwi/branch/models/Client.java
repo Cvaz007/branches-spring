@@ -2,11 +2,16 @@ package com.riwi.branch.models;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+
+import java.util.List;
 
 @Entity
 public class Client {
     @Id
     private String AccountNumber;
+    @OneToMany
+    private List<ClientBranch> clientBranches;
     private String name;
     private String phoneNumber;
     private String direction;
@@ -16,8 +21,9 @@ public class Client {
     public Client() {
     }
 
-    public Client(String accountNumber, String name, String phoneNumber, String direction, String genre, String salary) {
+    public Client(String accountNumber, List<ClientBranch> clientBranches, String name, String phoneNumber, String direction, String genre, String salary) {
         AccountNumber = accountNumber;
+        this.clientBranches = clientBranches;
         this.name = name;
         this.phoneNumber = phoneNumber;
         this.direction = direction;

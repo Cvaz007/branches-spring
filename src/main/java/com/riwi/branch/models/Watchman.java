@@ -2,11 +2,16 @@ package com.riwi.branch.models;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+
+import java.util.List;
 
 @Entity
 public class Watchman {
     @Id
     private String identificationNumber;
+    @OneToMany
+    private List<BranchWatchman> branchWatchman;
     private  String name;
     private String genre;
     private String phoneNumber;
@@ -15,8 +20,9 @@ public class Watchman {
     public Watchman() {
     }
 
-    public Watchman(String identificationNumber, String name, String genre, String phoneNumber, double salary) {
+    public Watchman(String identificationNumber, List<BranchWatchman> branchWatchman, String name, String genre, String phoneNumber, double salary) {
         this.identificationNumber = identificationNumber;
+        this.branchWatchman = branchWatchman;
         this.name = name;
         this.genre = genre;
         this.phoneNumber = phoneNumber;
