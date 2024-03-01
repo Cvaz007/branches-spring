@@ -9,16 +9,8 @@ public class Branch {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer code;
-    @OneToMany
-    private List<ClientBranch> clientBranches;
     @ManyToOne
     private Bank bankId;
-    @OneToMany
-    private List<Employee> employees;
-    @OneToMany
-    private List<BranchWatchman> branchWatchman;
-    @OneToMany
-    private List<ATM> atms;
     private String city;
     private  String phoneNumber;
     private String location;
@@ -26,40 +18,12 @@ public class Branch {
     public Branch() {
     }
 
-    public Branch(Integer code, List<ClientBranch> clientBranches, Bank bankId, List<Employee> employees, List<BranchWatchman> branchWatchman, List<ATM> atms, String city, String phoneNumber, String location) {
+    public Branch(Integer code, Bank bankId, String city, String phoneNumber, String location) {
         this.code = code;
-        this.clientBranches = clientBranches;
         this.bankId = bankId;
-        this.employees = employees;
-        this.branchWatchman = branchWatchman;
-        this.atms = atms;
         this.city = city;
         this.phoneNumber = phoneNumber;
         this.location = location;
-    }
-
-    public List<ClientBranch> getClientBranches() {
-        return clientBranches;
-    }
-
-    public void setClientBranches(List<ClientBranch> clientBranches) {
-        this.clientBranches = clientBranches;
-    }
-
-    public List<BranchWatchman> getBranchWatchman() {
-        return branchWatchman;
-    }
-
-    public void setBranchWatchman(List<BranchWatchman> branchWatchman) {
-        this.branchWatchman = branchWatchman;
-    }
-
-    public List<ATM> getAtms() {
-        return atms;
-    }
-
-    public void setAtms(List<ATM> atms) {
-        this.atms = atms;
     }
 
     public Bank getBankId() {
@@ -68,14 +32,6 @@ public class Branch {
 
     public void setBankId(Bank bankId) {
         this.bankId = bankId;
-    }
-
-    public List<Employee> getEmployees() {
-        return employees;
-    }
-
-    public void setEmployees(List<Employee> employees) {
-        this.employees = employees;
     }
 
     public String getLocation() {

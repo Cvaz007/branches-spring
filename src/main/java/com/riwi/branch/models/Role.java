@@ -9,27 +9,17 @@ public class Role {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer code;
-    @OneToMany
-    private List<Employee> employees;
     private String name;
     private String description;
 
     public Role() {
     }
 
-    public Role(Integer code, List<Employee> employees, String name, String description) {
+    public Role(Integer code, String name, String description) {
         this.code = code;
-        this.employees = employees;
+
         this.name = name;
         this.description = description;
-    }
-
-    public List<Employee> getEmployees() {
-        return employees;
-    }
-
-    public void setEmployees(List<Employee> employees) {
-        this.employees = employees;
     }
 
     public Integer getCode() {

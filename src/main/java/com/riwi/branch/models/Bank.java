@@ -9,16 +9,14 @@ import java.util.List;
 public class Bank {
     @EmbeddedId
     private BankId id;
-    @OneToMany
-    private List<Branch> branches;
     private Date dateFundation;
 
     public Bank() {
     }
 
-    public Bank(BankId id, List<Branch> branches, Date dateFundation) {
+    public Bank(BankId id, Date dateFundation) {
         this.id = id;
-        this.branches = branches;
+
         this.dateFundation = dateFundation;
     }
 
