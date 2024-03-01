@@ -3,17 +3,12 @@ package com.riwi.branch.models;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
-import org.antlr.v4.runtime.misc.NotNull;
-
-import java.util.List;
 
 @Entity
 public class Client {
     @Id
     private String AccountNumber;
     @Column(nullable = false, length = 35)
-    @NotNull
     private String name;
     @Column(length = 25)
     private String phoneNumber;
