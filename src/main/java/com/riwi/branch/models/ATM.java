@@ -1,6 +1,7 @@
 package com.riwi.branch.models;
 
 import jakarta.persistence.*;
+import org.antlr.v4.runtime.misc.NotNull;
 
 @Entity
 public class ATM {
@@ -9,6 +10,8 @@ public class ATM {
     private Integer number;
     @ManyToOne
     private Branch branchId;
+    @Column(nullable = false, length = 35)
+    @NotNull
     private String location;
     private String deposit;
 

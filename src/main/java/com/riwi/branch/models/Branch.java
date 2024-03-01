@@ -1,6 +1,7 @@
 package com.riwi.branch.models;
 
 import jakarta.persistence.*;
+import org.antlr.v4.runtime.misc.NotNull;
 
 import java.util.List;
 
@@ -11,8 +12,12 @@ public class Branch {
     private Integer code;
     @ManyToOne
     private Bank bankId;
+    @Column(nullable = false, length = 35)
+    @NotNull
     private String city;
     private  String phoneNumber;
+    @Column(nullable = false, length = 35)
+    @NotNull
     private String location;
 
     public Branch() {
