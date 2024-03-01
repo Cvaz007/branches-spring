@@ -1,6 +1,7 @@
 package com.riwi.branch.models;
 
 import jakarta.persistence.*;
+import org.antlr.v4.runtime.misc.NotNull;
 
 import java.util.List;
 
@@ -9,6 +10,8 @@ public class Role {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer code;
+    @Column(nullable = false, length = 35)
+    @NotNull
     private String name;
     private String description;
 
