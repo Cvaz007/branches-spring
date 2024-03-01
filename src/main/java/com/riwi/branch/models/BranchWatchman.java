@@ -3,7 +3,6 @@ package com.riwi.branch.models;
 import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
 import jakarta.persistence.ManyToOne;
-import jakarta.persistence.MapsId;
 
 import java.util.Date;
 @Entity

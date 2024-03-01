@@ -3,7 +3,6 @@ package com.riwi.branch.models;
 import jakarta.persistence.*;
 import org.antlr.v4.runtime.misc.NotNull;
 
-import java.util.List;
 
 @Entity
 public class Role {
@@ -11,7 +10,6 @@ public class Role {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer code;
     @Column(nullable = false, length = 35)
-    @NotNull
     private String name;
     private String description;
 

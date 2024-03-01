@@ -1,7 +1,6 @@
 package com.riwi.branch.models;
 
 import jakarta.persistence.*;
-import org.antlr.v4.runtime.misc.NotNull;
 import java.util.Date;
 
 @Entity
@@ -14,7 +13,6 @@ public class Employee {
     @ManyToOne
     private Branch branchId;
     @Column(nullable = false, length = 35)
-    @NotNull
     private String name;
     private String genre;
     private String phoneNumber;

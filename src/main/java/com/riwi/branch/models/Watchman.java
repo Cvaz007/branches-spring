@@ -3,8 +3,6 @@ package com.riwi.branch.models;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
-import org.antlr.v4.runtime.misc.NotNull;
 
 import java.util.List;
 
@@ -13,7 +11,6 @@ public class Watchman {
     @Id
     private String identificationNumber;
     @Column(nullable = false, length = 35)
-    @NotNull
     private  String name;
     private String genre;
     private String phoneNumber;
