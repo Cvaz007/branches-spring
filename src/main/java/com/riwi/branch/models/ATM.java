@@ -23,6 +23,14 @@ public class ATM {
         this.deposit = deposit;
     }
 
+    public Branch getBranchId() {
+        return branchId;
+    }
+
+    public void setBranchId(Branch branchId) {
+        this.branchId = branchId;
+    }
+
     public Integer getNumber() {
         return number;
     }

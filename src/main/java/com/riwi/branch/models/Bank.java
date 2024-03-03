@@ -19,8 +19,11 @@ public class Bank {
         this.dateFundation = dateFundation;
     }
 
-    public Bank(Date dateFundation) {
-        this.dateFundation = dateFundation;
+    public BankId getId() {
+        return id;
+    }
+    public void setId(BankId id) {
+        this.id = id;
     }
     public Date getDateFundation() {
         return dateFundation;

@@ -1,7 +1,7 @@
 package com.riwi.branch.services;
 
 import com.riwi.branch.models.Client;
-import com.riwi.branch.repository.ClientRepository;
+import com.riwi.branch.repositories.ClientRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

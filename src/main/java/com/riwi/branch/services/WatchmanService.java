@@ -1,7 +1,7 @@
 package com.riwi.branch.services;
 
 import com.riwi.branch.models.Watchman;
-import com.riwi.branch.repository.WatchmanRepository;
+import com.riwi.branch.repositories.WatchmanRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

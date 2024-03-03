@@ -1,7 +1,7 @@
 package com.riwi.branch.services;
 
 import com.riwi.branch.models.Role;
-import com.riwi.branch.repository.RoleRepository;
+import com.riwi.branch.repositories.RoleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
