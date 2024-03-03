@@ -2,11 +2,9 @@ package com.riwi.branch.services;
 
 import com.riwi.branch.models.BranchWatchman;
 import com.riwi.branch.models.BranchWatchmanId;
-import com.riwi.branch.repository.BranchWatchmanRepository;
+import com.riwi.branch.repositories.BranchWatchmanRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 @Service
 

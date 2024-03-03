@@ -1,7 +1,7 @@
 package com.riwi.branch.services;
 
 import com.riwi.branch.models.Employee;
-import com.riwi.branch.repository.EmployeeRepository;
+import com.riwi.branch.repositories.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

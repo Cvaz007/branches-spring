@@ -1,4 +1,4 @@
-package com.riwi.branch.repository;
+package com.riwi.branch.repositories;
 
 import com.riwi.branch.models.Watchman;
 import org.springframework.data.jpa.repository.JpaRepository;

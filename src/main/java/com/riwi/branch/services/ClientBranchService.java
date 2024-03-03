@@ -2,7 +2,7 @@ package com.riwi.branch.services;
 
 import com.riwi.branch.models.ClientBranch;
 import com.riwi.branch.models.ClientBranchId;
-import com.riwi.branch.repository.ClientBranchRepository;
+import com.riwi.branch.repositories.ClientBranchRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,7 +1,7 @@
 package com.riwi.branch.services;
 
 import com.riwi.branch.models.ATM;
-import com.riwi.branch.repository.ATMRepository;
+import com.riwi.branch.repositories.ATMRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
